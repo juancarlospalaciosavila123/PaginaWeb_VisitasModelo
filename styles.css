@@ -1,0 +1,261 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.principal{
+    background-color: #11284b;
+    width: calc(100vw- 0px);
+    min-height: calc(100vh - 0px);
+    background-color: #11284b;
+    background-image: url("data:image/svg+xml,..."); /* Tu SVG base aquí */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.svgLogoTituloSvg{
+    display: block; 
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.svgArriba {
+    background-image: url('Resources/svgArriba.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* O usa 'contain' si quieres que se ajuste sin recortar */
+
+    width: 100%; /* O un ancho específico */
+    height: 180px; /* Ajusta la altura según lo necesario */
+}
+
+.logoTitulo{
+    height: 315px;
+    display: flex; 
+    gap: 10px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.titulos{
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.titulo1, .titulo2{
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 45px;
+}
+
+.titulo1 h1, .titulo2 h1{
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.svgAbajo {
+    background-image: url('Resources/svgAbajo.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* O usa 'contain' si quieres que se ajuste sin recortar */
+    background-position: bottom;
+    width: 100%; /* O un ancho específico */
+    height: 180px; /* Ajusta la altura según lo necesario */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+}
+
+.circuloFlecha {
+  width: 64px;
+  height: 64px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: brinco 1.5s infinite ease-in-out;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.circuloFlecha:hover {
+  transform: scale(1.1);
+}
+
+.flecha {
+  width: 28px;
+  height: 28px;
+  stroke: #555;
+}
+
+/* Animación de brinco */
+@keyframes brinco {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+/* Fondo completo */
+.contenido {
+    background-image: url('resources/fondo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: #ddd;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Vidrio centrado */
+.contenidoVidrio {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    text-align: center;
+    height: auto;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    padding-bottom: 40px;
+}
+
+.contenidoVidrio h1{
+    padding-top: 40px;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    padding-bottom:30px ;
+}
+
+
+.circulosEnviarFormularios {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.piso1 , .piso2 {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.opcionVisita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  flex: 1;
+}
+
+.circuloIcono {
+  width: 140px;              /* antes 100px */
+  height: 140px;             /* antes 100px */
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  font-size: 50px;           /* antes 36px */
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+
+.circuloIcono:hover {
+  transform: scale(1.1);
+}
+
+.opcionVisita p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.piePagina {
+
+    background-color: #d7ab28;
+    padding: 40px 30px;
+    color: #11284b;
+    font-family: sans-serif;
+}
+
+
+.tituloPie {
+
+  font-size: 30px;
+  color: #11284b;
+  margin-bottom: 25px;
+}
+
+/* Ahora los items se alinean horizontalmente */
+.redesSociales {
+  display: flex;
+  justify-content: space-between; /* o center / flex-start según el diseño */
+  gap: 40px;
+  flex-wrap: wrap; /* Para que no se desborde en pantallas pequeñas */
+}
+
+.itemRed {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  min-width: 200px;
+}
+
+.circuloIconoRed {
+  width: 50px;
+  height: 50px;
+  background-color: #11284b;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.circuloIconoRed:hover {
+  transform: scale(1.1);
+}
