@@ -134,6 +134,7 @@
   color: #ddd;
   padding-top: 100px;
   padding-bottom: 100px;
+  height: auto;
 }
 
 /* Vidrio centrado */
@@ -213,6 +214,47 @@
   margin-top: 10px;
   font-size: 18px;
 }
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Contenedor del formulario */
+.volverFormulario {
+    margin-top: 40px;
+    display: none;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botón Atrás */
+.volver {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #0a84ff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.volver:hover {
+    color: #005bb5;
+    text-decoration: underline;
+}
+
+/* Iframe del formulario */
+.formulario{
+    width: 100%;
+    height: 80vh; /* altura proporcional a la pantalla */
+    border: none;
+    border-radius: 8px;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 .piePagina {
   background-color: #d7ab28;

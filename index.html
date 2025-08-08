@@ -44,7 +44,7 @@
                 <div class="circulosEnviarFormularios">
                     <div class="piso1">
                         <!-- Opción 1 -->
-                        <div class="opcionVisita">
+                        <div class="opcionVisita" data-form="https://forms.office.com/Pages/ResponsePage.aspx?id=XYZ123&embed=true">
                             <div class="circuloIcono">
                             <i class="fas fa-user icon-big"></i>
                             </div>
@@ -52,7 +52,7 @@
                         </div>
 
                         <!-- Opción 2 -->
-                        <div class="opcionVisita">
+                        <div class="opcionVisita" data-form="https://docs.google.com/forms/d/e/TU_FORM_PERSONAL/viewform?embedded=true">
                             <div class="circuloIcono">
                             <i class="fas fa-users icon-big"></i>
                             </div>
@@ -60,14 +60,14 @@
                         </div>
 
                         <!-- Opción 3 -->
-                        <div class="opcionVisita">
+                        <div class="opcionVisita" data-form="https://docs.google.com/forms/d/e/TU_FORM_PERSONAL/viewform?embedded=true">
                             <div class="circuloIcono">
                             <i class="fas fa-building icon-big"></i>
                             </div>
                             <p>Institución</p>
                         </div>
                         <!-- Opción 4 -->
-                        <div class="opcionVisita">
+                        <div class="opcionVisita" data-form="https://docs.google.com/forms/d/e/TU_FORM_PERSONAL/viewform?embedded=true">
                             <div class="circuloIcono">
                             <i class="fas fa-user icon-big"></i>
                             </div>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="piso2">
                         <!-- Opción 1 -->
-                        <div class="opcionVisita">
+                        <div class="opcionVisita" data-form="https://docs.google.com/forms/d/e/TU_FORM_PERSONAL/viewform?embedded=true">
                             <div class="circuloIcono">
                             <i class="fas fa-user icon-big"></i>
                             </div>
@@ -84,7 +84,7 @@
                         </div>
 
                         <!-- Opción 2 -->
-                        <div class="opcionVisita">
+                        <div class="opcionVisita" data-form="https://docs.google.com/forms/d/e/TU_FORM_PERSONAL/viewform?embedded=true">
                             <div class="circuloIcono">
                             <i class="fas fa-users icon-big"></i>
                             </div>
@@ -92,7 +92,7 @@
                         </div>
 
                         <!-- Opción 3 -->
-                        <div class="opcionVisita">
+                        <div class="opcionVisita" data-form="https://docs.google.com/forms/d/e/TU_FORM_PERSONAL/viewform?embedded=true">
                             <div class="circuloIcono">
                             <i class="fas fa-building icon-big"></i>
                             </div>
@@ -101,6 +101,13 @@
 
                     </div>
                 </div>
+                <!-- Contenedor para mostrar el formulario -->
+            </div>
+            <div class="volverFormulario" id="contenedorFormulario" style="margin-top: 30px; display: none;">
+                <a href="#" class="volver" id="btnAtras" style="display:inline-block; margin-bottom:15px; font-weight:bold; color:#0a84ff; cursor:pointer;">
+                    ← Atrás
+                </a>
+                <iframe class="formulario" id="iframeFormulario" width="100%" height="800" frameborder="0" style="border: none;"></iframe>
             </div>
         </div>
         <div class="piePagina">
@@ -131,7 +138,7 @@
                     <span>grupomodelomx</span>
                 </div>
 
-                <!-- Web -->
+                <!-- Web --> 
                 <div class="itemRed">
                     <div class="circuloIconoRed">
                         <i class="fas fa-globe icon-tama"></i>
