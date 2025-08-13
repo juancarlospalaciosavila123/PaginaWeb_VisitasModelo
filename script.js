@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const contenedorFormulario = document.getElementById('contenedorFormulario');
   const iframeFormulario = document.getElementById('iframeFormulario');
   const btnAtras = document.getElementById('btnAtras');
+  const btnSiguiente = document.getElementById('btnSiguiente');
+  const contenedorArchivos = document.getElementById('contenedorArchivos');
 
   document.querySelectorAll('.opcionVisita').forEach(opcion => {
     opcion.addEventListener('click', () => {
@@ -55,5 +57,36 @@ document.addEventListener('DOMContentLoaded', () => {
     contenidoVidrio.style.display = 'block';
     contenidoVidrio.scrollIntoView({ behavior: 'smooth' });
   });
+
+    btnSiguiente.addEventListener('click', e => {
+    e.preventDefault();
+    // Limpia iframe
+    iframeFormulario.src = '';
+    // Oculta formulario
+    contenedorFormulario.style.display = 'none';
+    // Muestra contenidoVidrio de nuevo
+    contenedorArchivos.style.display = 'block';
+    contenedorArchivos.scrollIntoView({ behavior: 'smooth' });
+  });
 });
 
+//Mustra el pedir papeles depende si es Nacional o Internacional
+document.addEventListener('DOMContentLoaded', function() {
+    const tipoPersona = document.getElementById('tipoPersona');
+    const extranjeroDiv = document.getElementById('camposExtranjero');
+    const nacionalDiv = document.getElementById('camposNacional');
+
+    tipoPersona.addEventListener('change', function() {
+        const valor = this.value;
+        if (valor === 'extranjero') {
+            extranjeroDiv.style.display = 'flex';
+            nacionalDiv.style.display = 'none';
+        } else if (valor === 'nacional') {
+            nacionalDiv.style.display = 'flex';
+            extranjeroDiv.style.display = 'none';
+        } else {
+            extranjeroDiv.style.display = 'none';
+            nacionalDiv.style.display = 'none';
+        }
+    });
+});
