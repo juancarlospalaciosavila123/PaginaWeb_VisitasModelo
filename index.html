@@ -139,7 +139,7 @@
                     <div class="opcionDocumento">
                         <h6 class="nameDocumento">Pasaporte</h6>
                         <div class="circuloDocumento">
-                            <h6 class="descripciónDocumento">Sube tu pasaporte</h6>
+                            <h6 class="descripciónDocumento">Sube tu Pasaporte</h6>
                             <!--<input class="documento" type="file">-->
                         </div>
                     </div>
@@ -167,7 +167,7 @@
                     <div class="opcionDocumento">
                         <h6 class="nameDocumento">NSS (SUA)</h6>
                         <div class="circuloDocumento">
-                            <h6 class="descripciónDocumento">Sube Sua o NSS</h6>
+                            <h6 class="descripciónDocumento">Sube Sua </h6>
                             <!--<input class="documento" type="file">-->
                         </div>
                     </div>
@@ -213,6 +213,27 @@
         </div>
 
     </div>
+    <!-- Modal para subir archivo -->
+    <div id="modalSubida" class="modal">
+        <div class="modal-content" >
+            <span class="cerrar">&times;</span>
+            <h4 id="tituloModal">Subir documento</h4>
 
+            <!-- Icono dinámico -->
+            <div class="iconoArchivo">
+                <img id="iconoEstadoArchivo" src="Resources/archivo_no.png" alt="Estado del archivo" width="30">
+            </div>
+
+            <!-- Texto dinámico -->
+            <p id="nombreArchivo">Sin archivo seleccionado</p>
+
+            <!-- Botón para seleccionar archivo -->
+            <input type="file" id="inputArchivo" accept=".jpg,.jpeg,.pdf" style="display:none;">
+            <button id="btnSeleccionarArchivo">Seleccionar archivo</button>
+
+            <!-- Botón para seleccionar archivo -->
+            <button class="validar" id="btnSubir">Validar Documento</button>
+        </div>
+    </div>
 </body>
 </html>

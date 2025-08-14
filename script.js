@@ -90,3 +90,94 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Abrir el modal, cerrar 
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("modalSubida");
+    const cerrarModal = document.querySelector(".cerrar");
+    const inputArchivo = document.getElementById("inputArchivo");
+    const btnSubir = document.getElementById("btnSubir");
+    const tituloModal = document.getElementById("tituloModal");
+
+    let documentoActual = "";
+
+    // Abrir modal al hacer clic en un circuloDocumento
+    document.querySelectorAll(".circuloDocumento").forEach(circulo => {
+        circulo.addEventListener("click", function () {
+            documentoActual = this.parentElement.querySelector(".nameDocumento").innerText.trim();
+            tituloModal.innerText = `Subir ${documentoActual}`;
+            inputArchivo.value = ""; // Limpia archivo anterior
+            modal.style.display = "block";
+        });
+    });
+
+    // Cerrar modal con la X
+    cerrarModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Cerrar modal haciendo clic fuera del contenido
+    window.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Subir archivo
+    btnSubir.addEventListener("click", function () {
+        if (!inputArchivo.files.length) {
+            alert("Por favor, selecciona un archivo.");
+            return;
+        }
+
+        const archivo = inputArchivo.files[0];
+        const extPermitidas = ["image/jpeg", "application/pdf"];
+
+        if (!extPermitidas.includes(archivo.type)) {
+            alert("Formato no permitido. Solo se aceptan JPG o PDF.");
+            return;
+        }
+
+        // Aquí iría tu lógica para validar identificación real (por API, etc.)
+        alert(`Archivo de ${documentoActual} subido correctamente.`);
+
+        modal.style.display = "none";
+    });
+});
+
+
+
+// Pone el archivo texto e icono entre titulo y boton
+document.addEventListener("DOMContentLoaded", function () {
+    const btnSeleccionarArchivo = document.getElementById("btnSeleccionarArchivo");
+    const nombreArchivo = document.getElementById("nombreArchivo");
+    const inputArchivo = document.getElementById("inputArchivo");
+    const iconoEstadoArchivo = document.getElementById("iconoEstadoArchivo");
+
+    btnSeleccionarArchivo.addEventListener("click", function () {
+        inputArchivo.click();
+    });
+
+    inputArchivo.addEventListener("change", function () {
+        if (this.files.length) {
+            let archivo = this.files[0];
+            let extension = archivo.name.split('.').pop().toLowerCase();
+
+            if (["jpg", "jpeg", "pdf"].includes(extension)) {
+                nombreArchivo.innerText = archivo.name;
+                iconoEstadoArchivo.src = "Resources/archivo_si.png"; // ✅
+            } else {
+                alert("Formato no válido. Solo se permiten .jpg, .jpeg o .pdf");
+                inputArchivo.value = ""; // reset
+                nombreArchivo.innerText = "Sin archivo seleccionado";
+                iconoEstadoArchivo.src = "Resources/archivo_no.png"; // ❌
+            }
+        } else {
+            nombreArchivo.innerText = "Sin archivo seleccionado";
+            iconoEstadoArchivo.src = "Resources/archivo_no.png"; // ❌
+        }
+    });
+});
+
+
+
