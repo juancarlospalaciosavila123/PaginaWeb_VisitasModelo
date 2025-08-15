@@ -92,12 +92,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Abrir el modal, cerrar 
+// Abrir el modal, cerrar 
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("modalSubida");
     const cerrarModal = document.querySelector(".cerrar");
     const inputArchivo = document.getElementById("inputArchivo");
     const btnSubir = document.getElementById("btnSubir");
     const tituloModal = document.getElementById("tituloModal");
+
+    const divVideo = document.querySelector(".Video");
+    const divArchivos = document.querySelector(".contenedorArchivos");
 
     let documentoActual = "";
 
@@ -138,13 +142,31 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Aquí iría tu lógica para validar identificación real (por API, etc.)
-        alert(`Archivo de ${documentoActual} subido correctamente.`);
+        // Simulación de validación del documento (puedes cambiarlo por tu API real)
+        const documentoValido = Math.random() > 0.5; // Ejemplo: 50% de probabilidad
 
-        modal.style.display = "none";
+        if (documentoValido) {
+            Swal.fire({
+                title: `Archivo de ${documentoActual} subido y validado correctamente.`,
+                icon: "success",
+                confirmButtonText: "Aceptar"
+            }).then(() => {
+                // Una vez que el usuario cierre la alerta
+                divVideo.style.display = "block"; // Mostrar el video
+                divArchivos.style.display = "none"; // Ocultar los archivos
+                modal.style.display = "none"; // Cerrar el modal
+            });
+        } else {
+            Swal.fire({
+                title: "Error",
+                text: "El documento no fue validado con éxito. Intenta otra vez.",
+                icon: "error",
+                confirmButtonText: "Reintentar"
+            });
+        }
+
     });
 });
-
 
 
 // Pone el archivo texto e icono entre titulo y boton
