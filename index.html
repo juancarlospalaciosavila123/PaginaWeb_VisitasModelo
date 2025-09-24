@@ -113,77 +113,9 @@
                     ← Atrás
                 </a>
                 <iframe class="formulario" id="iframeFormulario" width="100%" height="800" frameborder="0" style="border: none;"></iframe>
-                <a href="#" class="siguiente" id="btnSiguiente" style="display:inline-block; margin-bottom:15px; font-weight:bold; color:#0a84ff; cursor:pointer; float: right;">
-                    Siguiente →
-                </a>
-            </div>
-            <!-- Contenedor para mostrar la subida de documentos -->
-            <div class="contenedorArchivos" id="contenedorArchivos">
-                <h2>Validación de Documentos</h2>
-
-                <div class ="internacionalNacional">
-                    <p>Seleccione su tipo de nacionalidad:</p>
-                    <select id="tipoPersona">
-                        <option value="">-- Seleccione --</option>
-                        <option value="extranjero">Extranjero</option>
-                        <option value="nacional">Nacional</option>
-                    </select>
-                </div>
-                <!-- Campos para Extranjero -->
-                <div class="camposExtranjero" id="camposExtranjero">
-                    <!-- Opción 1 -->
-                    <div class="opcionDocumento">
-                        <h6 class="nameDocumento">Identificación</h6>
-                        <div class="circuloDocumento">
-                            <h6 class="descripciónDocumento">Sube tu Identificación</h6>
-                            <!--<input class="documento" type="file">-->
-                        </div>
-                    </div>
-                    <!-- Opción 2 -->
-                    <div class="opcionDocumento">
-                        <h6 class="nameDocumento">Pasaporte</h6>
-                        <div class="circuloDocumento">
-                            <h6 class="descripciónDocumento">Sube tu Pasaporte</h6>
-                            <!--<input class="documento" type="file">-->
-                        </div>
-                    </div>
-                    <!-- Opción 3 -->
-                    <div class="opcionDocumento">
-                        <h6 class="nameDocumento">Carta de gastos medicos mayores </h6>
-                        <div class="circuloDocumento">
-                            <h6 class="descripciónDocumento">Sube tu carta de gastos medicos mayores</h6>
-                            <!--<input class="documento" type="file">-->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Campos para Nacional -->
-                <div class="camposNacional" id="camposNacional">
-                    <!-- Opción 1 -->
-                    <div class="opcionDocumento">
-                        <h6 class="nameDocumento">Identificación</h6>
-                        <div class="circuloDocumento">
-                            <h6 class="descripciónDocumento">Sube tu Identificación</h6>
-                            <!--<input class="documento" type="file">-->
-                        </div>
-                    </div>
-                    <!-- Opción 2 -->
-                    <div class="opcionDocumento">
-                        <h6 class="nameDocumento">NSS (SUA)</h6>
-                        <div class="circuloDocumento">
-                            <h6 class="descripciónDocumento">Sube Sua </h6>
-                            <!--<input class="documento" type="file">-->
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-        <div class="contenedorVideo" style="display: none; text-align: center;">
-            <video width="640" height="360" controls>
-                <source src="Resources/video.mp4" type="video/mp4">
-                Tu navegador no soporta la etiqueta de video.
-            </video>
-        </div>
+        
         <div class="piePagina">
             <h2 class="tituloPie">Conócenos</h2>
             
@@ -244,6 +176,10 @@
             <!-- Botón para seleccionar archivo -->
             <button class="validar" id="btnSubir">Validar Documento</button>
         </div>
+    </div>
+    <!-- Loader oculto por defecto -->
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
     </div>
 </body>
 </html>

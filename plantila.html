@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Pase de acceso Grupo Modelo</title>
+
+<style>
+  @page {
+    size: letter portrait;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f5f5;
+    color: #111;
+  }
+
+  .page {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 4px solid #053674;
+  }
+
+  /* Encabezado */
+  .header {
+    display: flex;
+    align-items: center;
+    background-color: #053674;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 6px;
+  }
+  .header img.logo {
+    height: 60px;
+    margin-right: 20px;
+  }
+  .header h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    flex: 1;
+    text-align: center;
+  }
+
+  /* Grid principal de acceso */
+  .grid-acceso {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .columna-izquierda,
+  .columna-derecha {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Estilo común para todos los campos */
+  .field {
+    margin: 0;
+    padding: 8px;
+    background: #f9f9f9;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    font-size: 14px;
+    height: 38px; /* Altura exacta para todos los campos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .imagen-acceso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    border: 3px solid #E43941;
+    border-radius: 12px;
+    background: #fff;
+  }
+
+  .imagen-acceso img {
+    max-height: 100%;
+    max-width: 90%;
+    object-fit: contain;
+  }
+
+  .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #053674;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+  }
+
+  /* Sello centrado verticalmente */
+  .field.sello {
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Mensaje destacado */
+  .message {
+    margin: 20px 0;
+    padding: 15px;
+    background: #ECAE12;
+    border-left: 5px solid #E43941;
+    border-radius: 8px;
+    color: #053674;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* Pie de página */
+  .footer {
+    margin-top: auto;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    color: #73491D;
+    background: #f3f3f3;
+    border-top: 1px solid #d0d0d0;
+    border-radius: 4px;
+  }
+</style>
+
+</head>
+<body>
+  <div class="page">
+    <!-- Encabezado con logo y título -->
+    <div class="header">
+      <img src="data:image/png;base64,{{LogoBase64}}" alt="Logo Grupo Modelo" class="logo" />
+      <h1>PASE DE ACCESO CERVECERIA DEL CENTRO APAN</h1>
+    </div>
+
+    <div class="grid-acceso">
+      <!-- Columna izquierda -->
+      <div class="columna-izquierda">
+        <div class="imagen-acceso">
+          <img src="data:image/png;base64,{{AccessImageBase64}}" alt="Tipo de acceso" />
+        </div>
+        <p class="field"><span class="label">Nombre del Anfitrión</span><span class="value">{{Anfitrion}}</span></p>
+        <p class="field"><span class="label">Aseguramiento</span><span class="value">{{Aseguramiento}}</span></p>
+        <p class="field"><span class="label">Área a la que accede</span><span class="value">{{Area}}</span></p>
+        <p class="field"><span class="label">Equipo de cómputo</span><span class="value">{{Equipo}}</span></p>
+      </div>
+
+      <!-- Columna derecha -->
+      <div class="columna-derecha">
+        <p class="field"><span class="label">Folio</span><span class="value">{{Folio}}</span></p>
+        <p class="field"><span class="label">Nombre del visitante</span><span class="value">{{NombreVisitante}}</span></p>
+        <p class="field"><span class="label">Fecha de la visita</span><span class="value">{{FechaVisita}}</span></p>
+        <p class="field"><span class="label">Nacionalidad</span><span class="value">{{Nacionalidad}}</span></p>
+        <p class="field"><span class="label">Vencimiento del seguro</span><span class="value">{{Vencimiento}}</span></p>
+        <p class="field"><span class="label">Motivo de la visita</span><span class="value">{{Motivo}}</span></p>
+        <p class="field sello"><span class="label">Sello</span></p>
+      </div>
+    </div>
+
+    <!-- Mensaje importante -->
+    <div class="message">
+      {{Mensaje}}
+    </div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+      La identificación seleccionada, así como algún comprobante de su seguro deberán ser presentados el día de su visita en recepción. Los datos proporcionados serán únicamente para gestionar tu acceso a planta y no serán usados para otros fines.
+    </div>
+  </div>
+</body>
+</html>

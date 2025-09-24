@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +7,6 @@
   background-color: #11284b;
   width: 100%;
   min-height: 100%;
-  background-color: #11284b;
   background-image: url("data:image/svg+xml,..."); /* Tu SVG base aquí */
   background-size: cover;
   background-repeat: no-repeat;
@@ -24,9 +22,9 @@
 .svgArriba {
   background-image: url('Resources/svgArriba.png');
   background-repeat: no-repeat;
-  background-size: cover; /* O usa 'contain' si quieres que se ajuste sin recortar */
-  width: 100%; /* O un ancho específico */
-  height: 180px; /* Ajusta la altura según lo necesario */
+  background-size: cover;
+  width: 100%;
+  height: 180px;
 }
 
 .logoTitulo{
@@ -75,10 +73,10 @@
 .svgAbajo {
   background-image: url('Resources/svgAbajo.png');
   background-repeat: no-repeat;
-  background-size: cover; /* O usa 'contain' si quieres que se ajuste sin recortar */
+  background-size: cover;
   background-position: bottom;
-  width: 100%; /* O un ancho específico */
-  height: 180px; /* Ajusta la altura según lo necesario */
+  width: 100%;
+  height: 180px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -111,17 +109,11 @@
   stroke: #555;
 }
 
-/* Animación de brinco */
 @keyframes brinco {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-10px) scale(1.05);
-  }
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.05); }
 }
 
-/* Fondo completo */
 .contenido {
   background-image: url("Resources/fondo.png");
   background-repeat: no-repeat;
@@ -137,7 +129,6 @@
   height: auto;
 }
 
-/* Vidrio centrado */
 .contenidoVidrio {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 16px;
@@ -164,7 +155,6 @@
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   padding-bottom:30px ;
 }
-
 
 .circulosEnviarFormularios {
   width: 100%;
@@ -193,15 +183,15 @@
 }
 
 .circuloIcono {
-  width: 140px;              /* antes 100px */
-  height: 140px;             /* antes 100px */
+  width: 140px;
+  height: 140px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  font-size: 50px;           /* antes 36px */
+  font-size: 50px;
   color: #fff;
   transition: transform 0.3s;
 }
@@ -215,8 +205,6 @@
   font-size: 18px;
 }
 
-
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /* Contenedor del formulario */
 .volverFormulario {
   margin-top: 40px;
@@ -231,162 +219,33 @@
   margin-right: auto;
 }
 
-/* Botón Atrás */
-.volver, .siguiente {
-    display: inline-block;
-    margin-bottom: 15px;
-    font-weight: bold;
-    color: #0a84ff;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.2s;
+.volver {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #0a84ff;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
 }
 
-.volver:hover, .siguiente:hover {
-    color: #005bb5;
-    text-decoration: underline;
-}
-
-.siguiente{
-  padding-top: 10px;
+.volver:hover {
+  color: #005bb5;
+  text-decoration: underline;
 }
 
 /* Iframe del formulario */
 .formulario{
   width: 100%;
-  height: 80vh; /* altura proporcional a la pantalla */
+  height: 80vh;
   border: none;
   border-radius: 8px;
 }
 
-.contenedorArchivos{
-  margin-top: 40px;
-  display: none;
-  padding: 40px;
-  width: 80%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-  flex-direction: column;
-  padding-bottom: 40px;
-  justify-items: center;
-}
-
-.contenedorArchivos h2{
-  padding-top: 10px;
-  padding-bottom: 50px;
-  text-align: center;
-  font-size: 3rem;
-}
-
-/* Texto y labels */
-.contenedorArchivos p, 
-.contenedorArchivos label {
-  font-size: 1.5em;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.internacionalNacional{
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  padding-bottom: 50px;
-  height: auto;
-}
-
-/* Combo box estilizado */
-select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  font-size: 1em;
-  background-color: white;
-  color: black;
-  margin-bottom: 15px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
-
-select:hover {
-  background-color: #f2f2f2;
-}
-
-.camposExtranjero{
-  display: none;
-  justify-content: center; /* centra horizontalmente */
-  gap: 30px; /* espacio entre opciones */
-}
-
-.camposNacional{
-  display: none;
-  justify-content: center; /* centra horizontalmente */
-  gap: 30px; /* espacio entre opciones */
-}
-
-.camposExtranjero .opcionDocumento{
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  color: white;
-  align-items: center;
-  text-align: center;
-}
-
-.camposNacional .opcionDocumento{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  color: white;
-  align-items: center;
-  text-align: center;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-.circuloDocumento{
-  width: 140px;              /* antes 100px */
-  height: 140px;             /* antes 100px */
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  font-size: 50px;           /* antes 36px */
-  color: #fff;
-  transition: transform 0.3s;
-}
-
-.circuloDocumento:hover {
-  transform: scale(1.1);
-}
-
-.nameDocumento  {
-  align-content: center;
-  font-size: 1.5rem;
-  width: 100%;
-  height: 60px;
-}
-
-.descripciónDocumento {
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-/*/////////////////////////////////////////////////+*/
+/* Modal */
 .modal {
-  display: none; /* Oculto por defecto */
+  display: none;
   left: 0; top: 0;
   width:100%; height: 100%;
   background-color: rgba(0,0,0,0.6);
@@ -395,22 +254,18 @@ select:hover {
   align-items: center;
   justify-content: center;
   display: flex;
-  align-items: center;  /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
 }
 
 .modal-content {
   display: flex;
   justify-content: center;
-  justify-items: center;
-  align-items: center;
   align-items: center;
   border-radius: 8px;
   padding-bottom: 20px;
   flex-direction: column;
-  width: 30%; /* El 40% del ancho de la ventana */
-  max-width: 500px; /* Opcional: ancho máximo en píxeles */
-  margin: 15px auto; /* Centrado horizontal */
+  width: 30%;
+  max-width: 500px;
+  margin: 15px auto;
   background: white;
   padding: 20px;
   top:80px;
@@ -427,14 +282,11 @@ select:hover {
 .validar {
   background-color: #d7ab28;
   font-size: 25px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px 20px;
   margin-top:15px;
 }
 
-/*/////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Pie de página */
 .piePagina {
   background-color: #d7ab28;
   padding: 40px 30px;
@@ -443,18 +295,16 @@ select:hover {
 }
 
 .tituloPie {
-  font-size: 30px;
+  font-size: 3rem;
   color: #11284b;
   margin-bottom: 25px;
-  font-size: 3rem;
 }
 
-/* Ahora los items se alinean horizontalmente */
 .redesSociales {
   display: flex;
-  justify-content: space-between; /* o center / flex-start según el diseño */
+  justify-content: space-between;
   gap: 40px;
-  flex-wrap: wrap; /* Para que no se desborde en pantallas pequeñas */
+  flex-wrap: wrap;
 }
 
 .itemRed {
@@ -482,302 +332,93 @@ span {
   font-size: larger;
 }
 
+/* Loader */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
 
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/* Estilos para móviles */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media queries móviles, tablet vertical y horizontal */
 @media only screen and (max-width: 600px) {
-  .svgArriba, .svgAbajo {
-    background-size: contain; 
-  }
-
-  .logoTitulo{
-    height: 380px;
-    display: block; 
-    gap: 0px;
-  }
-
-  .logo{
-    height: 300px;
-    margin-left: 0px;
-    margin-top: 0px;
-  }
-
-  .logo img {
-    width: 70%;
-  }
-
-  .titulos{
-    gap: 0px;
-  }
-
-  .titulo1, .titulo2{
-    height: auto;
-    margin-left: 0px;
-    margin-top:50px;
-  }
-
-  .titulo1 h1, .titulo2 h1{
-    font-size: 2rem;
-  }
-
-  .circuloFlecha {
-    margin-bottom: 20px;
-  }
-
-  .contenidoVidrio h1{
-    font-size: 2.5rem;
-    padding-bottom:0px ;
-  }
-
-
-  .circulosEnviarFormularios {
-    margin-top: 50px;
-  }
-
-  .piso1 , .piso2 {
-    width: 80%;
-    margin-top: 0px;
-    flex-direction: column;
-  }
-
-  .circuloIcono {
-    width: 160px;             
-    height: 160px;           
-  }
-
-  .opcionVisita p {
-    font-size: 28px;
-    margin-bottom: 60px;
-  }
-
-  .redesSociales {
-    gap: 30px;
-  }
-
-  span {
-    font-size: 22px;
-  }
+  .svgArriba, .svgAbajo { background-size: contain; }
+  .logoTitulo{ height: 380px; display: block; gap: 0px; }
+  .logo{ height: 300px; margin-left: 0; margin-top: 0; }
+  .logo img { width: 70%; }
+  .titulos{ gap: 0px; }
+  .titulo1, .titulo2{ height: auto; margin-left: 0; margin-top:50px; }
+  .titulo1 h1, .titulo2 h1{ font-size: 2rem; }
+  .circuloFlecha { margin-bottom: 20px; }
+  .contenidoVidrio h1{ font-size: 2.5rem; padding-bottom:0; }
+  .circulosEnviarFormularios { margin-top: 50px; }
+  .piso1 , .piso2 { width: 80%; margin-top: 0; flex-direction: column; }
+  .circuloIcono { width: 160px; height: 160px; }
+  .opcionVisita p { font-size: 28px; margin-bottom: 60px; }
+  .redesSociales { gap: 30px; }
+  span { font-size: 22px; }
 }
 
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/* Estilos para tablet vertical */
 @media only screen and (min-width: 601px) and (max-width: 768px) and (orientation: portrait) {
-  .svgArriba, .svgAbajo {
-    background-size: contain; 
-  }
-
-  .logoTitulo{
-    height: 670px;
-    display: block; 
-    gap: 0px;
-  }
-
-  .logo{
-    height: 400px;
-    margin-left: 0px;
-    margin-top: 0px;
-  }
-
-  .logo img {
-    width: 50%;
-  }
-
-  .titulos{
-    gap: 0px;
-  }
-
-  .titulo1, .titulo2{
-    height: auto;
-    margin-left: 0px;
-    margin-top:50px;
-  }
-
-  .titulo1 h1, .titulo2 h1{
-    font-size: 4rem;
-  }
-
-  .circuloFlecha {
-    margin-bottom: 20px;
-  }
-
-  .contenidoVidrio h1{
-    font-size: 4rem;
-    padding-bottom:0px ;
-  }
-
-  .circulosEnviarFormularios {
-    margin-top: 50px;
-  }
-
-  .piso1 , .piso2 {
-    width: 80%;
-    margin-top: 0px;
-    flex-direction: column;
-  }
-
-  .circuloIcono {
-    width: 300px;              
-    height: 300px;            
-  }
-
-  .opcionVisita p {
-    font-size: 38px;
-    margin-bottom: 60px;
-  }
-
-  .icon-big {
-    font-size: 80px; 
-  }
-
-  .tituloPie {
-    font-size: 4rem;
-  }
-
-  .redesSociales {
-    justify-content: left;
-    width: auto;
-    gap: 30px;
-  }
-
-  .itemRed {
-    align-items: center;
-    gap: 10px;
-    font-size: 25px;
-    min-width: 200px;
-  }
-
-  .circuloIconoRed {
-    width: 90px;
-    height: 90px;
-    background-color: #11284b;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    transition: transform 0.3s;
-  }
-
-  .icon-tama{
-    font-size: 35px;
-  }
+  .svgArriba, .svgAbajo { background-size: contain; }
+  .logoTitulo{ height: 670px; display: block; gap: 0px; }
+  .logo{ height: 400px; margin-left: 0; margin-top: 0; }
+  .logo img { width: 50%; }
+  .titulos{ gap: 0px; }
+  .titulo1, .titulo2{ height: auto; margin-left: 0; margin-top:50px; }
+  .titulo1 h1, .titulo2 h1{ font-size: 4rem; }
+  .circuloFlecha { margin-bottom: 20px; }
+  .contenidoVidrio h1{ font-size: 4rem; padding-bottom:0; }
+  .circulosEnviarFormularios { margin-top: 50px; }
+  .piso1 , .piso2 { width: 80%; margin-top: 0; flex-direction: column; }
+  .circuloIcono { width: 300px; height: 300px; }
+  .opcionVisita p { font-size: 38px; margin-bottom: 60px; }
+  .icon-big { font-size: 80px; }
+  .tituloPie { font-size: 4rem; }
+  .redesSociales { justify-content: left; width: auto; gap: 30px; }
+  .itemRed { align-items: center; gap: 10px; font-size: 25px; min-width: 200px; }
+  .circuloIconoRed { width: 90px; height: 90px; font-size: 20px; }
+  .icon-tama{ font-size: 35px; }
 }
 
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/*********************************************************************************************************/
-/* Estilos para tablet horizontal */
 @media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-  /* Estilos para tablet horizontal */
-  .svgArriba, .svgAbajo {
-    background-size: contain; 
-  }
-
-  .logoTitulo{
-    height: 410px;
-    display: block; 
-    gap: 0px;
-  }
-
-  .logo{
-    height: 200px;
-    margin-left: 0px;
-    margin-top: 0px;
-  }
-
-  .logo img {
-    width: 25%;
-  }
-
-  .titulos{
-    gap: 0px;
-  }
-
-  .titulo1, .titulo2{
-    height: auto;
-    margin-left: 0px;
-    margin-top:50px;
-  }
-
-  .titulo1 h1, .titulo2 h1{
-    font-size: 4rem;
-  }
-
-  .circuloFlecha {
-    margin-bottom: 20px;
-  }
-
-  .contenidoVidrio h1{
-    font-size: 4rem;
-    padding-bottom:0px ;
-  }
-
-  .circulosEnviarFormularios {
-    margin-top: 50px;
-  }
-
-  .piso1 , .piso2 {
-    width: 80%;
-    margin-top: 0px;
-    flex-direction: column;
-  }
-
-  .circuloIcono {
-    width: 300px;              
-    height: 300px;            
-  }
-
-  .opcionVisita p {
-    font-size: 38px;
-    margin-bottom: 60px;
-  }
-
-  .icon-big {
-    font-size: 80px; 
-  }
-
-  .tituloPie {
-    font-size: 4rem;
-  }
-
-  .redesSociales {
-    justify-content: left;
-    width: auto;
-    gap: 30px;
-  }
-
-  .itemRed {
-    align-items: center;
-    gap: 10px;
-    font-size: 25px;
-    min-width: 200px;
-  }
-
-  .circuloIconoRed {
-    width: 90px;
-    height: 90px;
-    background-color: #11284b;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    transition: transform 0.3s;
-  }
-
-  .icon-tama{
-    font-size: 35px;
-  }
+  .svgArriba, .svgAbajo { background-size: contain; }
+  .logoTitulo{ height: 410px; display: block; gap: 0px; }
+  .logo{ height: 200px; margin-left: 0; margin-top: 0; }
+  .logo img { width: 25%; }
+  .titulos{ gap: 0px; }
+  .titulo1, .titulo2{ height: auto; margin-left: 0; margin-top:50px; }
+  .titulo1 h1, .titulo2 h1{ font-size: 4rem; }
+  .circuloFlecha { margin-bottom: 20px; }
+  .contenidoVidrio h1{ font-size: 4rem; padding-bottom:0; }
+  .circulosEnviarFormularios { margin-top: 50px; }
+  .piso1 , .piso2 { width: 80%; margin-top: 0; flex-direction: column; }
+  .circuloIcono { width: 300px; height: 300px; }
+  .opcionVisita p { font-size: 38px; margin-bottom: 60px; }
+  .icon-big { font-size: 80px; }
+  .tituloPie { font-size: 4rem; }
+  .redesSociales { justify-content: left; width: auto; gap: 30px; }
+  .itemRed { align-items: center; gap: 10px; font-size: 25px; min-width: 200px; }
+  .circuloIconoRed { width: 90px; height: 90px; font-size: 20px; }
+  .icon-tama{ font-size: 35px; }
 }
