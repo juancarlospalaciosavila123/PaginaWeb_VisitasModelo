@@ -216,6 +216,57 @@
   border-radius: 8px;
 }
 
+
+
+
+
+
+
+
+/* Contenedor general del formulario */
+.volverFormulario {
+  width: 100%;
+  max-width: 1000px; /* ancho máximo para no ocupar toda la pantalla */
+  margin: 40px auto; /* centrado con margen arriba/abajo */
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: none; /* inicialmente oculto */
+}
+
+/* Botón volver */
+.volver {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #0a84ff;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.volver:hover {
+  color: #005bb5; /* tono más oscuro al pasar el mouse */
+}
+
+/* Iframe del formulario */
+.formulario {
+  width: 100%;
+  height: 800px;
+  border: none;
+  border-radius: 12px;
+  background: #f9f9f9;
+}
+
+
+
+
+
+
+
+
+
 /* Pie de página */
 .piePagina {
   background-color: #d7ab28;
@@ -233,21 +284,26 @@
 
 .redesSociales {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
   gap: 30px;
 }
 
 .itemRed {
+  flex: 1;
   display: flex;
+  min-width: 150px; /* evita que se achiquen demasiado */
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 10px;
   font-size: 18px;
 }
 
 .circuloIconoRed {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: #11284b;
   border-radius: 50%;
   display: flex;
@@ -255,35 +311,22 @@
   align-items: center;
   color: white;
   font-size: 20px;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
 }
 
-/* Loader */
-.loader-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0.8);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
+
+/* Tamaño de los íconos */
+.icon-tama {
+  font-size: 24px;
 }
 
-.spinner {
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid #3498db;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
+/* Texto debajo del ícono */
+.itemRed span {
+  font-size: 14px;
+  color: #444;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 
 
 
