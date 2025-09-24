@@ -302,50 +302,109 @@ span { font-size: larger; }
   .circuloIconoRed { width:70px; height:70px; font-size:24px; }
   .tituloPie { font-size:2.5rem; }
 }
-
-/* iPad horizontal - logoTitulo dividido en 3 columnas */
+/* iPad 8ª generación - Landscape */
 @media only screen and (min-width: 821px) and (max-width: 1080px) and (orientation: landscape) {
   
-  .logoTitulo {
-    display: flex;
-    flex-direction: row;       /* Dividir horizontalmente */
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+  /* SVG arriba y abajo */
+  .svgArriba, .svgAbajo {
+    background-size: contain;
   }
 
+  /* Contenedor principal del logo y títulos */
+  .logoTitulo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  /* Logo - un tercio del ancho, cuadrado */
   .logo {
-    flex: 1;                   /* Ocupa un tercio */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;             /* Ajustable según necesidad */
+    aspect-ratio: 1/1; /* Hace el div cuadrado */
+    max-width: 33%;    /* Máximo un tercio */
   }
 
   .logo img {
-    width: 100%;               /* Ajusta al ancho del contenedor */
-    height: auto;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantiene proporción dentro del div cuadrado */
   }
 
+  /* Títulos - dos tercios del ancho, apilados */
   .titulos {
-    flex: 2;                   /* Ocupa dos tercios */
+    flex: 2;
     display: flex;
-    flex-direction: column;     /* Apilar los títulos */
+    flex-direction: column;
     justify-content: center;
-    gap: 10px;                  /* Espacio entre los títulos */
+    gap: 10px; /* Separación entre títulos */
+    max-width: 66%; /* Ocupa dos tercios */
   }
 
   .titulo1, .titulo2 {
     width: 100%;
     margin: 0;
-    text-align: left;           /* Alineación opcional */
+    text-align: left; /* O centrado si prefieres */
   }
 
   .titulo1 h1, .titulo2 h1 {
-    font-size: 3rem;            /* Ajustable */
+    font-size: 4rem;    /* Más grande */
+    line-height: 1.1;
     margin: 0;
   }
-}
 
+  /* Círculo de flecha */
+  .circuloFlecha {
+    width: 60px;
+    height: 60px;
+  }
+
+  .flecha {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Contenido vidrio */
+  .contenidoVidrio {
+    width: 85%;
+    padding: 30px;
+  }
+
+  .contenidoVidrio h1 {
+    font-size: 2.8rem;
+    padding-bottom: 20px;
+  }
+
+  /* Footer redes sociales */
+  .redesSociales {
+    flex-wrap: wrap;
+    justify-content: center; /* Mantener centrado */
+    gap: 20px;
+  }
+
+  .itemRed {
+    font-size: 18px;
+  }
+
+  .circuloIconoRed {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .tituloPie {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  /* Iframe del formulario */
+  .formulario {
+    height: 75vh;
+  }
+}
