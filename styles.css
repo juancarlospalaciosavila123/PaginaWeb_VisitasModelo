@@ -422,3 +422,243 @@ span {
   .circuloIconoRed { width: 90px; height: 90px; font-size: 20px; }
   .icon-tama{ font-size: 35px; }
 }
+
+
+/* Estilos para iPad 8ª generación (portrait y landscape aproximado) */
+@media only screen and (min-width: 600px) and (max-width: 820px) {
+  
+  /* Ajustes para los SVG de arriba y abajo */
+  .svgArriba, .svgAbajo {
+    background-size: contain; 
+  }
+
+  /* Logo y títulos */
+  .logoTitulo {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+
+  .logo {
+    height: 250px;
+    margin: 0;
+  }
+
+  .logo img {
+    width: 50%;
+    height: auto;
+  }
+
+  .titulos {
+    gap: 10px;
+  }
+
+  .titulo1, .titulo2 {
+    height: auto;
+    margin: 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .titulo1 h1, .titulo2 h1 {
+    font-size: 3rem;
+  }
+
+  /* Círculo de flecha */
+  .circuloFlecha {
+    width: 60px;
+    height: 60px;
+  }
+
+  .flecha {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Contenido vidrio */
+  .contenidoVidrio {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .contenidoVidrio h1 {
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+  }
+
+  /* Circulos con iconos */
+  .circulosEnviarFormularios {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .piso1, .piso2 {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .circuloIcono {
+    width: 160px;
+    height: 160px;
+    font-size: 50px;
+  }
+
+  .opcionVisita p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  /* Footer redes sociales */
+  .redesSociales {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .itemRed {
+    font-size: 18px;
+  }
+
+  .circuloIconoRed {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .tituloPie {
+    font-size: 2.5rem;
+  }
+
+  /* Iframe de formulario */
+  .formulario {
+    height: 70vh;
+  }
+}
+
+
+
+
+
+
+
+
+/* Estilos iPad 8ª generación - Landscape */
+@media only screen and (min-width: 820px) and (max-width: 1080px) and (orientation: landscape) {
+
+  /* SVG arriba y abajo */
+  .svgArriba, .svgAbajo {
+    background-size: contain;
+  }
+
+  /* Logo y títulos */
+  .logoTitulo {
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .logo {
+    height: 200px;
+    margin: 0;
+  }
+
+  .logo img {
+    width: 35%;
+    height: auto;
+  }
+
+  .titulos {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .titulo1, .titulo2 {
+    height: auto;
+    margin: 0;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .titulo1 h1, .titulo2 h1 {
+    font-size: 3rem;
+  }
+
+  /* Círculo de flecha */
+  .circuloFlecha {
+    width: 60px;
+    height: 60px;
+  }
+
+  .flecha {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Contenido vidrio */
+  .contenidoVidrio {
+    width: 85%;
+    padding: 30px;
+  }
+
+  .contenidoVidrio h1 {
+    font-size: 2.8rem;
+    padding-bottom: 20px;
+  }
+
+  /* Circulos con iconos */
+  .circulosEnviarFormularios {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .piso1, .piso2 {
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .circuloIcono {
+    width: 140px;
+    height: 140px;
+    font-size: 45px;
+  }
+
+  .opcionVisita p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  /* Footer redes sociales */
+  .redesSociales {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .itemRed {
+    font-size: 18px;
+  }
+
+  .circuloIconoRed {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .tituloPie {
+    font-size: 2.5rem;
+  }
+
+  /* Iframe de formulario */
+  .formulario {
+    height: 75vh;
+  }
+}
