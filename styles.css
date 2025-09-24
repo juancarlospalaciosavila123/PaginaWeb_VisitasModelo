@@ -1,39 +1,41 @@
+/* ====================================== */
+/* ESTILOS GENERALES */
+/* ====================================== */
 * {
   margin: 0;
   padding: 0;
 }
 
-.principal{
+.principal {
   background-color: #11284b;
   width: 100%;
   min-height: 100%;
-  background-image: url("data:image/svg+xml,..."); /* Tu SVG base aquí */
+  background-image: url("data:image/svg+xml,...");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.svgLogoTituloSvg{
+.svgLogoTituloSvg {
   display: block; 
   flex-direction: column; 
   gap: 10px;
 }
 
-.svgArriba {
-  background-image: url('Resources/svgArriba.png');
+.svgArriba, .svgAbajo {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 180px;
 }
 
-.logoTitulo{
-  height: 320px;
+.logoTitulo {
   display: flex; 
   gap: 10px;
+  height: 320px;
 }
 
-.logo{
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,40 +50,26 @@
   width: 100%;
 }
 
-.titulos{
+.titulos {
   display: flex; 
   flex-direction: column; 
   gap: 10px;
 }
 
-.titulo1, .titulo2{
+.titulo1, .titulo2 {
   height: 300px;
   width: 100%;
-  align-items: center;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-left: 45px;
 }
 
-.titulo1 h1, .titulo2 h1{
+.titulo1 h1, .titulo2 h1 {
   color: white;
   font-size: 5rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-
-.svgAbajo {
-  background-image: url('Resources/svgAbajo.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  width: 100%;
-  height: 180px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 20px;
 }
 
 .circuloFlecha {
@@ -114,18 +102,18 @@
   50% { transform: translateY(-10px) scale(1.05); }
 }
 
+/* ====================================== */
+/* CONTENIDO */
 .contenido {
   background-image: url("Resources/fondo.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: center;
   color: #ddd;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
   height: auto;
 }
 
@@ -138,38 +126,31 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
   text-align: center;
-  height: auto;
   display: flex;
-  justify-content: top;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   width: 80%;
-  padding-bottom: 40px;
+  padding: 40px 20px;
+  height: auto;
 }
 
-.contenidoVidrio h1{
+.contenidoVidrio h1 {
   padding-top: 40px;
+  padding-bottom: 30px;
   color: white;
   font-size: 4rem;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  padding-bottom:30px ;
 }
 
-.circulosEnviarFormularios {
-  width: 100%;
+/* ====================================== */
+/* ICONOS Y FORMULARIOS */
+.circulosEnviarFormularios, .piso1, .piso2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
-  margin-top: 30px;
-}
-
-.piso1 , .piso2 {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap;
   margin-top: 30px;
 }
 
@@ -205,88 +186,15 @@
   font-size: 18px;
 }
 
-/* Contenedor del formulario */
-.volverFormulario {
-  margin-top: 40px;
-  display: none;
-  padding: 40px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  width: 80%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.volver {
-  display: inline-block;
-  margin-bottom: 15px;
-  font-weight: bold;
-  color: #0a84ff;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-
-.volver:hover {
-  color: #005bb5;
-  text-decoration: underline;
-}
-
-/* Iframe del formulario */
-.formulario{
+.formulario {
   width: 100%;
   height: 80vh;
   border: none;
   border-radius: 8px;
 }
 
-/* Modal */
-.modal {
-  display: none;
-  left: 0; top: 0;
-  width:100%; height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  z-index: 1000;
-  position: fixed;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-.modal-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  padding-bottom: 20px;
-  flex-direction: column;
-  width: 30%;
-  max-width: 500px;
-  margin: 15px auto;
-  background: white;
-  padding: 20px;
-  top:80px;
-}
-
-.cerrar {
-  float: right;
-  font-size: 40px;
-  cursor: pointer;
-  width: 20px;
-  margin-bottom: 5px;
-}
-
-.validar {
-  background-color: #d7ab28;
-  font-size: 25px;
-  padding: 10px 20px;
-  margin-top:15px;
-}
-
-/* Pie de página */
+/* ====================================== */
+/* PIE DE PÁGINA */
 .piePagina {
   background-color: #d7ab28;
   padding: 40px 30px;
@@ -296,15 +204,14 @@
 
 .tituloPie {
   font-size: 3rem;
-  color: #11284b;
   margin-bottom: 25px;
 }
 
 .redesSociales {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 40px;
 }
 
 .itemRed {
@@ -328,17 +235,14 @@
   transition: transform 0.3s;
 }
 
-span {
-  font-size: larger;
-}
+span { font-size: larger; }
 
-/* Loader */
+/* ====================================== */
+/* LOADER */
 .loader-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top:0; left:0;
+  width:100%; height:100%;
   background: rgba(255,255,255,0.8);
   display: none;
   align-items: center;
@@ -360,305 +264,41 @@ span {
   100% { transform: rotate(360deg); }
 }
 
-/* Media queries móviles, tablet vertical y horizontal */
+/* ====================================== */
+/* RESPONSIVE - GENERAL */
 @media only screen and (max-width: 600px) {
-  .svgArriba, .svgAbajo { background-size: contain; }
-  .logoTitulo{ height: 380px; display: block; gap: 0px; }
-  .logo{ height: 300px; margin-left: 0; margin-top: 0; }
   .logo img { width: 70%; }
-  .titulos{ gap: 0px; }
-  .titulo1, .titulo2{ height: auto; margin-left: 0; margin-top:50px; }
-  .titulo1 h1, .titulo2 h1{ font-size: 2rem; }
-  .circuloFlecha { margin-bottom: 20px; }
-  .contenidoVidrio h1{ font-size: 2.5rem; padding-bottom:0; }
-  .circulosEnviarFormularios { margin-top: 50px; }
-  .piso1 , .piso2 { width: 80%; margin-top: 0; flex-direction: column; }
-  .circuloIcono { width: 160px; height: 160px; }
+  .titulo1 h1, .titulo2 h1 { font-size: 2rem; }
+  .contenidoVidrio h1 { font-size: 2.5rem; padding-bottom:0; }
+  .circuloIcono { width:160px; height:160px; }
   .opcionVisita p { font-size: 28px; margin-bottom: 60px; }
-  .redesSociales { gap: 30px; }
+  .redesSociales { gap:30px; }
   span { font-size: 22px; }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 768px) and (orientation: portrait) {
-  .svgArriba, .svgAbajo { background-size: contain; }
-  .logoTitulo{ height: 670px; display: block; gap: 0px; }
-  .logo{ height: 400px; margin-left: 0; margin-top: 0; }
+@media only screen and (min-width: 601px) and (max-width: 820px) {
+  /* iPad 8ª generación portrait */
   .logo img { width: 50%; }
-  .titulos{ gap: 0px; }
-  .titulo1, .titulo2{ height: auto; margin-left: 0; margin-top:50px; }
-  .titulo1 h1, .titulo2 h1{ font-size: 4rem; }
-  .circuloFlecha { margin-bottom: 20px; }
-  .contenidoVidrio h1{ font-size: 4rem; padding-bottom:0; }
-  .circulosEnviarFormularios { margin-top: 50px; }
-  .piso1 , .piso2 { width: 80%; margin-top: 0; flex-direction: column; }
-  .circuloIcono { width: 300px; height: 300px; }
-  .opcionVisita p { font-size: 38px; margin-bottom: 60px; }
-  .icon-big { font-size: 80px; }
-  .tituloPie { font-size: 4rem; }
-  .redesSociales { justify-content: left; width: auto; gap: 30px; }
-  .itemRed { align-items: center; gap: 10px; font-size: 25px; min-width: 200px; }
-  .circuloIconoRed { width: 90px; height: 90px; font-size: 20px; }
-  .icon-tama{ font-size: 35px; }
+  .titulo1 h1, .titulo2 h1 { font-size: 3rem; }
+  .contenidoVidrio { width:90%; padding:20px; }
+  .contenidoVidrio h1 { font-size: 2.5rem; }
+  .circuloIcono { width:160px; height:160px; font-size:50px; }
+  .opcionVisita p { font-size:20px; }
+  .formulario { height:70vh; }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
-  .svgArriba, .svgAbajo { background-size: contain; }
-  .logoTitulo{ height: 410px; display: block; gap: 0px; }
-  .logo{ height: 200px; margin-left: 0; margin-top: 0; }
-  .logo img { width: 25%; }
-  .titulos{ gap: 0px; }
-  .titulo1, .titulo2{ height: auto; margin-left: 0; margin-top:50px; }
-  .titulo1 h1, .titulo2 h1{ font-size: 4rem; }
-  .circuloFlecha { margin-bottom: 20px; }
-  .contenidoVidrio h1{ font-size: 4rem; padding-bottom:0; }
-  .circulosEnviarFormularios { margin-top: 50px; }
-  .piso1 , .piso2 { width: 80%; margin-top: 0; flex-direction: column; }
-  .circuloIcono { width: 300px; height: 300px; }
-  .opcionVisita p { font-size: 38px; margin-bottom: 60px; }
-  .icon-big { font-size: 80px; }
-  .tituloPie { font-size: 4rem; }
-  .redesSociales { justify-content: left; width: auto; gap: 30px; }
-  .itemRed { align-items: center; gap: 10px; font-size: 25px; min-width: 200px; }
-  .circuloIconoRed { width: 90px; height: 90px; font-size: 20px; }
-  .icon-tama{ font-size: 35px; }
-}
-
-
-/* Estilos para iPad 8ª generación (portrait y landscape aproximado) */
-@media only screen and (min-width: 600px) and (max-width: 820px) {
-  
-  /* Ajustes para los SVG de arriba y abajo */
-  .svgArriba, .svgAbajo {
-    background-size: contain; 
-  }
-
-  /* Logo y títulos */
-  .logoTitulo {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    align-items: center;
-  }
-
-  .logo {
-    height: 250px;
-    margin: 0;
-  }
-
-  .logo img {
-    width: 50%;
-    height: auto;
-  }
-
-  .titulos {
-    gap: 10px;
-  }
-
-  .titulo1, .titulo2 {
-    height: auto;
-    margin: 10px 0;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .titulo1 h1, .titulo2 h1 {
-    font-size: 3rem;
-  }
-
-  /* Círculo de flecha */
-  .circuloFlecha {
-    width: 60px;
-    height: 60px;
-  }
-
-  .flecha {
-    width: 24px;
-    height: 24px;
-  }
-
-  /* Contenido vidrio */
-  .contenidoVidrio {
-    width: 90%;
-    padding: 20px;
-  }
-
-  .contenidoVidrio h1 {
-    font-size: 2.5rem;
-    padding-bottom: 20px;
-  }
-
-  /* Circulos con iconos */
-  .circulosEnviarFormularios {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .piso1, .piso2 {
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .circuloIcono {
-    width: 160px;
-    height: 160px;
-    font-size: 50px;
-  }
-
-  .opcionVisita p {
-    font-size: 20px;
-    margin-top: 10px;
-  }
-
-  /* Footer redes sociales */
-  .redesSociales {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .itemRed {
-    font-size: 18px;
-  }
-
-  .circuloIconoRed {
-    width: 70px;
-    height: 70px;
-    font-size: 24px;
-  }
-
-  .tituloPie {
-    font-size: 2.5rem;
-  }
-
-  /* Iframe de formulario */
-  .formulario {
-    height: 70vh;
-  }
-}
-
-
-
-
-
-
-
-
-/* Estilos iPad 8ª generación - Landscape */
-@media only screen and (min-width: 820px) and (max-width: 1080px) and (orientation: landscape) {
-
-  /* SVG arriba y abajo */
-  .svgArriba, .svgAbajo {
-    background-size: contain;
-  }
-
-  /* Logo y títulos */
-  .logoTitulo {
-    flex-direction: row;
-    height: auto;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .logo {
-    height: 200px;
-    margin: 0;
-  }
-
-  .logo img {
-    width: 35%;
-    height: auto;
-  }
-
-  .titulos {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .titulo1, .titulo2 {
-    height: auto;
-    margin: 0;
-    text-align: left;
-    justify-content: flex-start;
-  }
-
-  .titulo1 h1, .titulo2 h1 {
-    font-size: 3rem;
-  }
-
-  /* Círculo de flecha */
-  .circuloFlecha {
-    width: 60px;
-    height: 60px;
-  }
-
-  .flecha {
-    width: 24px;
-    height: 24px;
-  }
-
-  /* Contenido vidrio */
-  .contenidoVidrio {
-    width: 85%;
-    padding: 30px;
-  }
-
-  .contenidoVidrio h1 {
-    font-size: 2.8rem;
-    padding-bottom: 20px;
-  }
-
-  /* Circulos con iconos */
-  .circulosEnviarFormularios {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
-  }
-
-  .piso1, .piso2 {
-    flex-direction: row;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .circuloIcono {
-    width: 140px;
-    height: 140px;
-    font-size: 45px;
-  }
-
-  .opcionVisita p {
-    font-size: 18px;
-    margin-top: 10px;
-  }
-
-  /* Footer redes sociales */
-  .redesSociales {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 20px;
-  }
-
-  .itemRed {
-    font-size: 18px;
-  }
-
-  .circuloIconoRed {
-    width: 70px;
-    height: 70px;
-    font-size: 24px;
-  }
-
-  .tituloPie {
-    font-size: 2.5rem;
-  }
-
-  /* Iframe de formulario */
-  .formulario {
-    height: 75vh;
-  }
+@media only screen and (min-width: 821px) and (max-width: 1080px) {
+  /* iPad 8ª generación landscape */
+  .logoTitulo { flex-direction: row; gap: 20px; justify-content:center; align-items:center; }
+  .logo img { width:35%; }
+  .titulo1 h1, .titulo2 h1 { font-size:3rem; text-align:left; justify-content:flex-start; }
+  .contenidoVidrio { width:85%; padding:30px; }
+  .contenidoVidrio h1 { font-size:2.8rem; padding-bottom:20px; }
+  .circuloIcono { width:140px; height:140px; font-size:45px; }
+  .opcionVisita p { font-size:18px; }
+  .formulario { height:75vh; }
+  .circulosEnviarFormularios, .piso1, .piso2 { flex-wrap:wrap; justify-content:space-around; gap:20px; }
+  .redesSociales { justify-content:flex-start; gap:20px; }
+  .circuloIconoRed { width:70px; height:70px; font-size:24px; }
+  .tituloPie { font-size:2.5rem; }
 }
