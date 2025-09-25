@@ -425,12 +425,12 @@
   }
 
   .opcionVisita p {
-    font-size: 18px; /* un poco más pequeño en iPad */
+    font-size: 20px; /* un poco más pequeño en iPad */
   }
 
   .circuloIcono {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     font-size: 80px;
   }
 }
