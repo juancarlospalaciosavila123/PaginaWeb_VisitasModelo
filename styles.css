@@ -323,8 +323,9 @@
   .logo {
     flex: 1; /* 1 parte de 3 */
     margin: 0;
+    padding-left: 20px;
     height: auto; /* Para que no se deforme */
-    max-height: 150px;
+    max-height: 200px;
   }
 
   .logo img {
@@ -348,7 +349,7 @@
   }
 
   .titulo1 h1, .titulo2 h1 {
-    font-size: 3rem; /* un poco más chico para iPad */
+    font-size: 4rem; /* un poco más chico para iPad */
     text-align: left; /* alineados al inicio del bloque */
   }
 }
