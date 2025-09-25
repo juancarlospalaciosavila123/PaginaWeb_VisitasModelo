@@ -398,6 +398,7 @@
     gap: 10px;
     width: 100%;
     padding: 0 20px;
+    margin-bottom: 60px;
   }
 
   .titulo1, .titulo2 {
@@ -411,6 +412,8 @@
     text-align: center;
   }
 
+
+
   .piso1, .piso2 {
     justify-content: center; /* centra las filas */
     gap: 20px; /* menos espacio entre tarjetas */
@@ -418,11 +421,11 @@
 
   .opcionVisita {
     flex: 0 0 45%; /* cada uno ocupa aprox la mitad */
-    max-width: 45%; 
+    max-width: 60%; 
   }
 
   .opcionVisita p {
-    font-size: 16px; /* un poco más pequeño en iPad */
+    font-size: 18px; /* un poco más pequeño en iPad */
   }
 
   .circuloIcono {
