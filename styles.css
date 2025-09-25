@@ -308,55 +308,50 @@
 /*=================================================================================================*/
 /*=================================================================================================*/
 
-
-
-/* 📱 iPad 8va generación en vertical */
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 768px) 
-  and (orientation: portrait) {
-  
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 📱 iPad 8va generación en horizontal */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1024px) 
-  and (orientation: landscape) {
+/* Ajuste específico para iPad en horizontal (min 1024px y max 1366px aprox) */
+@media screen and (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
   
   .logoTitulo {
-    flex-direction: row; /* logo a la izquierda, títulos a la derecha */
-    align-items: center; /* centrado vertical */
-    justify-content: flex-start; /* alinear al inicio */
-    text-align: left;
-    gap: 20px; /* espacio entre logo y títulos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .logo {
+    flex: 1; /* 1 parte de 3 */
+    margin: 0;
+    height: auto; /* Para que no se deforme */
+    max-height: 250px;
   }
 
   .logo img {
-    max-width: 33%; /* un poco más grande en horizontal */
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Mantiene proporción */
   }
 
-  .titulos .titulo1 h1,
-  .titulos .titulo2 h1 {
-    font-size: 28px; /* aumentar tamaño en horizontal */
+  .titulos {
+    flex: 2; /* 2 partes de 3 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Alinea hacia la izquierda del bloque */
+    gap: 10px;
+  }
+
+  .titulo1, .titulo2 {
+    margin: 0;
+    width: 100%;
+  }
+
+  .titulo1 h1, .titulo2 h1 {
+    font-size: 3rem; /* un poco más chico para iPad */
+    text-align: left; /* alineados al inicio del bloque */
   }
 }
-
-
 
 
 
