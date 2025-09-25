@@ -358,3 +358,56 @@
 
 
 
+/* iPad en vertical (portrait) */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+
+  .logoTitulo {
+    display: flex;
+    flex-direction: column;  /* logo arriba, títulos abajo */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .logo {
+    flex: none;        /* ya no ocupa solo 1/3 */
+    width: 100%;       /* que abarque todo el ancho */
+    max-width: 250px;  /* límite para que no se vea gigante */
+    margin: 0 auto;
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .titulos {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   /* centrados bajo el logo */
+    gap: 10px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .titulo1, .titulo2 {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .titulo1 h1, .titulo2 h1 {
+    font-size: 2.5rem;   /* más pequeño en vertical */
+    text-align: center;
+  }
+}
+
+
+
+
