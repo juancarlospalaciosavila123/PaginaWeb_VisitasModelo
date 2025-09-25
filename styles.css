@@ -324,7 +324,7 @@
     flex: 1; /* 1 parte de 3 */
     margin: 0;
     height: auto; /* Para que no se deforme */
-    max-height: 250px;
+    max-height: 150px;
   }
 
   .logo img {
