@@ -412,8 +412,6 @@
     text-align: center;
   }
 
-
-
   .piso1, .piso2 {
     justify-content: center; /* centra las filas */
     gap: 30px; /* menos espacio entre tarjetas */
@@ -436,5 +434,50 @@
 }
 
 
+
+/* Celulares en vertical */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+
+  .logoTitulo {
+    display: flex;
+    flex-direction: column;   /* logo arriba, títulos abajo */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+
+  .logo {
+    flex: none;
+    width: 100%;
+    max-width: 180px;   /* más pequeño que en iPad */
+    margin: 0 auto;
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .titulos {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centrado */
+    gap: 5px;
+    width: 100%;
+  }
+
+  .titulo1 h1, 
+  .titulo2 h1 {
+    font-size: 1.8rem;   /* tamaño reducido para celular */
+    text-align: center;
+    word-wrap: break-word; /* evita que se desborde */
+  }
+}
 
 
