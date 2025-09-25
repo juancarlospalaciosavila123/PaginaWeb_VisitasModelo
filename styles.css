@@ -368,8 +368,8 @@
     justify-content: center;
     gap: 20px;
     width: 100%;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
   }
 
   .logo {
@@ -403,7 +403,7 @@
   }
 
   .titulo1 h1, .titulo2 h1 {
-    font-size: 2.5rem;   /* más pequeño en vertical */
+    font-size: 5rem;   /* más pequeño en vertical */
     text-align: center;
   }
 }
