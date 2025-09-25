@@ -380,6 +380,7 @@
     max-width: 3000px;  /* límite para que no se vea gigante */
     margin: 0 auto;
     margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .logo img {
@@ -408,6 +409,26 @@
   .titulo1 h1, .titulo2 h1 {
     font-size: 4.5rem;   /* más pequeño en vertical */
     text-align: center;
+  }
+
+  .piso1, .piso2 {
+    justify-content: center; /* centra las filas */
+    gap: 20px; /* menos espacio entre tarjetas */
+  }
+
+  .opcionVisita {
+    flex: 0 0 45%; /* cada uno ocupa aprox la mitad */
+    max-width: 45%; 
+  }
+
+  .opcionVisita p {
+    font-size: 16px; /* un poco más pequeño en iPad */
+  }
+
+  .circuloIcono {
+    width: 120px;
+    height: 120px;
+    font-size: 40px;
   }
 }
 
