@@ -371,14 +371,15 @@
     gap: 20px;
     width: 100%;
     margin-top: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   .logo {
     flex: none;        /* ya no ocupa solo 1/3 */
     width: 100%;       /* que abarque todo el ancho */
-    max-width: 250px;  /* límite para que no se vea gigante */
+    max-width: 3000px;  /* límite para que no se vea gigante */
     margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   .logo img {
