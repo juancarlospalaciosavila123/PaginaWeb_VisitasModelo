@@ -347,7 +347,7 @@
   }
 
   .logo img {
-    max-width: 180px; /* un poco más grande en horizontal */
+    max-width: 33%; /* un poco más grande en horizontal */
   }
 
   .titulos .titulo1 h1,
