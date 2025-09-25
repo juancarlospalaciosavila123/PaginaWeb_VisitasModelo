@@ -204,10 +204,6 @@
   flex: 1; /* los tres ocupan el mismo ancho */
 }
 
-
-
-
-
 /* Formulario */
 .formulario {
   width: 100%;
@@ -215,13 +211,6 @@
   border: none;
   border-radius: 8px;
 }
-
-
-
-
-
-
-
 
 /* Contenedor general del formulario */
 .volverFormulario {
@@ -258,14 +247,6 @@
   border-radius: 12px;
   background: #f9f9f9;
 }
-
-
-
-
-
-
-
-
 
 /* Pie de página */
 .piePagina {
@@ -316,12 +297,64 @@
 }
 
 
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+/*=================================================================================================*/
+
+
+
+/* 📱 iPad 8va generación en vertical */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 768px) 
+  and (orientation: portrait) {
+  
+  
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+/* 📱 iPad 8va generación en horizontal */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape) {
+  
+  .logoTitulo {
+    flex-direction: row; /* logo a la izquierda, títulos a la derecha */
+    align-items: center; /* centrado vertical */
+    justify-content: flex-start; /* alinear al inicio */
+    text-align: left;
+    gap: 20px; /* espacio entre logo y títulos */
+  }
+
+  .logo img {
+    max-width: 180px; /* un poco más grande en horizontal */
+  }
+
+  .titulos .titulo1 h1,
+  .titulos .titulo2 h1 {
+    font-size: 28px; /* aumentar tamaño en horizontal */
+  }
+}
 
 
 
