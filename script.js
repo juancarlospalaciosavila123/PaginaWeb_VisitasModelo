@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const translations = {
     es: {
-        titulo1: "Cerveceria del Centro",
-        titulo2: "Modelo Apan",
+        titulo1: "Cerveceria Modelo del",
+        titulo2: "Centro S. de R.L. de C.V.",
         seleccionar: "Seleccione su tipo de visita",
         opcion1: "Visita de Comunidad",
         opcion2: "Visita de Proveedores",
@@ -124,8 +124,8 @@ const translations = {
         conocer: "Conócenos"
     },
     en: {
-        titulo1: "Central Brewery",
-        titulo2: "Modelo Apan",
+        titulo1: "Cerveceria Modelo del",
+        titulo2: "Centro S. de R.L. de C.V.",
         seleccionar: "Select your visit type",
         opcion1: "Community Visit",
         opcion2: "Suppliers Visit",
@@ -137,8 +137,8 @@ const translations = {
         conocer: "Get to know us"
     },
     fr: {
-        titulo1: "Brasserie du Centre",
-        titulo2: "Modelo Apan",
+        titulo1: "Cerveceria Modelo del",
+        titulo2: "Centro S. de R.L. de C.V.",
         seleccionar: "Sélectionnez votre type de visite",
         opcion1: "Visite Communautaire",
         opcion2: "Visite des Fournisseurs",
@@ -150,8 +150,8 @@ const translations = {
         conocer: "Découvrez-nous"
     },
     pt: {
-        titulo1: "Cervejaria Central",
-        titulo2: "Modelo Apan",
+        titulo1: "Cerveceria Modelo del",
+        titulo2: "Centro S. de R.L. de C.V.",
         seleccionar: "Selecione o tipo de visita",
         opcion1: "Visita Comunitária",
         opcion2: "Visita de Fornecedores",
@@ -163,8 +163,8 @@ const translations = {
         conocer: "Conheça-nos"
     },
     nah: {
-        titulo1: "Cuauhpantlān Chīchīhuātlān",
-        titulo2: "Modelo Apan",
+        titulo1: "Cerveceria Modelo del",
+        titulo2: "Centro S. de R.L. de C.V.",
         seleccionar: "Ticpehualtia in tipoxochītl tlānēxtiliztli",
         opcion1: "Calpulli Tlāhuīz",
         opcion2: "Tlānamacani Tlāhuīz",
@@ -176,8 +176,8 @@ const translations = {
         conocer: "Xitechixmatika"
     },
     de: {
-        titulo1: "Zentralbrauerei",
-        titulo2: "Modelo Apan",
+        titulo1: "Cerveceria Modelo del",
+        titulo2: "Centro S. de R.L. de C.V.",
         seleccionar: "Wählen Sie Ihren Besuchstyp",
         opcion1: "Gemeindebesuch",
         opcion2: "Lieferantenbesuch",
@@ -189,8 +189,8 @@ const translations = {
         conocer: "Lernen Sie uns kennen"
     },
     zh: {
-        titulo1: "中央啤酒厂",
-        titulo2: "Modelo Apan",
+        titulo1: "Cerveceria Modelo del",
+        titulo2: "Centro S. de R.L. de C.V.",
         seleccionar: "请选择您的访问类型",
         opcion1: "社区参观",
         opcion2: "供应商参观",
@@ -202,8 +202,8 @@ const translations = {
         conocer: "了解我们"
     },
     ja: {
-        titulo1: "中央ブルワリー",
-        titulo2: "Modelo Apan",
+        titulo1: "Cerveceria Modelo del",
+        titulo2: "Centro S. de R.L. de C.V.",
         seleccionar: "訪問の種類を選択してください",
         opcion1: "地域訪問",
         opcion2: "サプライヤー訪問",
